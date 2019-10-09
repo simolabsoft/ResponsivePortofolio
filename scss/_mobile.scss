@@ -1,8 +1,75 @@
 // wide screens
 @include mediaXl {
+  main {
+    &#home {
+      .lg-heading {
+        font-size: 8rem;
+      }
+      .sm-heading {
+        font-size: 3rem;
+      }
+    }
+    .icons a {
+      margin-right: 0.5rem;
+      i {
+        font-size: 3rem;
+      }
+    }
+  }
+  .menu-btn {
+    .btn-line {
+      width: 50px;
+      height: 8px;
+      margin: 8px;
+    }
+    &.close {
+      transform: rotate(180deg);
+      .btn-line {
+        //line 1 rotate
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(15px, 15px);
+        }
+
+        //line 2 hide
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        // line 3 rotate
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(5.8px, -6px);
+        }
+      }
+    }
+  }
 }
 // wide desktop laptop
 @include mediaLg {
+  main {
+    &#home {
+      .lg-heading {
+        font-size: 3rem;
+      }
+      .sm-heading {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        padding-left: 0;
+      }
+    }
+    .icons a {
+      margin-right: 0.1rem;
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .menu-btn {
+    .btn-line {
+      width: 25px;
+      height: 4px;
+      margin: 4px;
+    }
+  }
 }
 // wide tablets small laptops
 @include mediaMd {
@@ -10,9 +77,27 @@
     align-items: center;
     text-align: center;
 
-    .lg-heading {
+    h1.lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
+      font-size: 2.5rem;
+    }
+    h2.sm-heading {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .icons a {
+      margin-right: 0.5rem;
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .menu-btn {
+    .btn-line {
+      width: 28px;
+      height: 4px;
+      margin: 4px;
     }
   }
   ul.menu-nav,
@@ -41,7 +126,29 @@
 }
 // wide smartPhons
 @include mediaSm {
-  main#home h1 {
-    margin-top: 10vh;
+  main {
+    &#home {
+      padding: 1rem;
+    }
+
+    &#home {
+      .lg-heading {
+        font-size: 1.5rem;
+        margin-top: 10vh;
+      }
+      .sm-heading {
+        font-size: 1rem;
+      }
+    }
+    .icons a {
+      margin-right: 0.1rem;
+      i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .menu-btn {
+    right: 10px;
+    top: 10px;
   }
 }

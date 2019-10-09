@@ -90,13 +90,63 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+@media screen and (min-width: 1771px) {
+  main#home .lg-heading {
+    font-size: 8rem; }
+  main#home .sm-heading {
+    font-size: 3rem; }
+  main .icons a {
+    margin-right: 0.5rem; }
+    main .icons a i {
+      font-size: 3rem; }
+  .menu-btn .btn-line {
+    width: 50px;
+    height: 8px;
+    margin: 8px; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(15px, 15px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(5.8px, -6px); } }
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  main#home .lg-heading {
+    font-size: 3rem; }
+  main#home .sm-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    padding-left: 0; }
+  main .icons a {
+    margin-right: 0.1rem; }
+    main .icons a i {
+      font-size: 1.5rem; }
+  .menu-btn .btn-line {
+    width: 25px;
+    height: 4px;
+    margin: 4px; } }
+
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
     text-align: center; }
-    main .lg-heading {
+    main h1.lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      font-size: 2.5rem; }
+    main h2.sm-heading {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem; }
+    main .icons a {
+      margin-right: 0.5rem; }
+      main .icons a i {
+        font-size: 1.5rem; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 4px;
+    margin: 4px; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -118,8 +168,20 @@
       height: 150px; } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
+  main#home {
+    padding: 1rem; }
+  main#home .lg-heading {
+    font-size: 1.5rem;
+    margin-top: 10vh; }
+  main#home .sm-heading {
+    font-size: 1rem; }
+  main .icons a {
+    margin-right: 0.1rem; }
+    main .icons a i {
+      font-size: 1.5rem; }
+  .menu-btn {
+    right: 10px;
+    top: 10px; } }
 
 * {
   box-sizing: border-box;
@@ -134,7 +196,7 @@ body {
   color: white;
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(/dist/img/backgroundImage.jpg);
@@ -179,11 +241,16 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  height: 100%;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%; }
   main#home {
     overflow: hidden; }
-    main#home h1 {
-      margin-top: 20vh; }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
